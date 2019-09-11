@@ -83,6 +83,15 @@ The 8086 was a 16-bit microprocessor.
    - %eax, %ax, %al all still work as expected.
 
 
+# Some ASM conventions:
+
+ - Safe registers: %rbx, %r12 .. %r15
+ - Special purpose: %rbp, %rsp
+ - Unsafe (temporary) registers: Everything else.
+
+ - Arguments go in: %rdi, %rsi, %rdx, %rcx, %r8, %r9
+ - Return values go in: %rax   (%rdx is second one)
+
 #  Powers of two
 
 1024 = 2^10 = 1k 1024^2 = 2^20 = 1M 2^30 = 1G 2^40 = 1T
