@@ -1,0 +1,8 @@
+<section class="row">
+  <article class="column">
+    <h2>col1</h2>
+  </article>
+  <article class="column">
+    <h2>col2</h2>
+  </article>
+</section>
