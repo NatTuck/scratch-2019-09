@@ -1,8 +1,8 @@
 <section class="row">
   <article class="column">
-    <h2>col1</h2>
-  </article>
-  <article class="column">
-    <h2>col2</h2>
+    <h1>TODO</h1>
+    <div id="root">
+      React component loading...
+    </div>
   </article>
 </section>

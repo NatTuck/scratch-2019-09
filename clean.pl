@@ -2,7 +2,7 @@
 use 5.12.0;
 use warnings FATAL => 'all';
 
-my @files = `find . -type f`;
+my @files = `find 3650* -type f`;
 
 for my $file (@files) {
     $file =~ /^.git/ && next;
