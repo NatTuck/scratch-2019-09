@@ -11,7 +11,7 @@ for my $file (@files) {
     my $type = `file "$file"`;
     chomp $type;
 
-    if ($type =~ /ELF/ && $file !~ /ASCII/) {
+    if (($type =~ /ELF/ || $type =~ /BEAM/) && $file !~ /ASCII/) {
         say "Cleaning: $file";
         system(qq{rm "$file"});
     }
