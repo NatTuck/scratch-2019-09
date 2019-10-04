@@ -1,0 +1,8 @@
+<h1>Hangman</h1>
+<div id="root">
+  React component loading...
+</div>
+
+<script>
+ window.game_name = "games:<%= @name %>";
+</script>
