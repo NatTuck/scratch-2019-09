@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JavaScript Concurrency</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+  </head>
+  <body>
+
+    <p id="demo">Hello, Page</p>
+    <p><button onClick="foo();">Foo</button></p>
+    <p><button onClick="bar();">Bar</button></p>
+    <p><button onClick="doFib(44);">Fib 44</button></p>
+
+
+<script>
+ function foo() {
+   $('#demo')[0].innerHTML = "foo!";
+ }
+
+ function bar() {
+   window.setTimeout(function () {
+     $('#demo')[0].innerHTML = "bar!";
+   }, 2000);
+ }
+
+ function fib(x) {
+   if (x < 2) {
+     return 1;
+   }
+   else {
+     return fib(x-1) + fib(x-2);
+   }
+ }
+
+ function doFib(x) {
+   $('#demo')[0].innerHTML = fib(x);
+ }
+
+</script>
+
+
+  </body>
+</html>
